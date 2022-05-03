@@ -1,4 +1,6 @@
- <nav class="navbar navbar-default">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/button.css'%}" />
+<nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -36,7 +38,9 @@
             <form class="navbar-form navbar-left">
         <div class="form-group">
         </div>
-        <button type="submit" class="btn btn-default">Cart</button>
+        <button type="submit" class="btn btn-default" >
+            <img src="{% static "images/cart.png" %}" id="cartbutton"/>
+        </button>
       </form>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
