@@ -1,3 +1,11 @@
+#################################
+miðvikudaginn 4
+lenda í vesen með git and venv
+fengum hjálp frá Ægir
+
+
+##################################
+þriðjudaginn 5
 seinasta tilraun á þriðjudaginn
 
 
