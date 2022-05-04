@@ -1,3 +1,9 @@
+Miðvikudaginn 4
+lenda í vesen með Git og venv
+Fengum hjálp með Ægir í gengnum Discord.
+
+#########################
+þriðjudaginn 3
 seinasta tilraun á þriðjudaginn
 
 
@@ -15,3 +21,4 @@ Bids/offers - products
 my products - products
 saved sellers - users ()
 logout
+
