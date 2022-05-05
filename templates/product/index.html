@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
     <h2> My products  </h2>
+    {% for product in products %}
+    <h4> {{product.name}}</h4>
+    <p> {{ product.price }}</p>
+    <h4> {{ product.description }}</h4>
+    <h4> {{ product.long_description }}</h4>
+    {% endfor %}
     <button>Add new product</button>
 {% endblock %}
