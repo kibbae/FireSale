@@ -73,10 +73,10 @@ class Product(models.Model):
     price = models.FloatField()
     description = models.CharField()
     long_description = models.TextField()
-    condition = models.CharField(choices=CONDITION_OPTIONS, max_length=25)
-    featured_image = models.ImageField(upload_to='Images')
-    timestamp = models.DateTimeField(auto_now_add=True, blank=True)
-    is_available = models.BooleanField(default=True)
+    #condition = models.CharField(choices=CONDITION_OPTIONS, max_length=25)
+    #featured_image = models.ImageField(upload_to='Images')
+    #timestamp = models.DateTimeField(auto_now_add=True, blank=True)
+    #is_available = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
