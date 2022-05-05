@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'Sale.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'firesale-db',
+        'USER': 'firesale',
+        'PASSWORD': 'fireandsale',
+        'HOST': '34.66.64.23',
+        'PORT': '5432'
     }
 }
 
