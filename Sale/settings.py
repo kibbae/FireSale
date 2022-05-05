@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FireSale.apps.FiresaleConfig',
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
