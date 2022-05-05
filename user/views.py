@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+
 
 #user = [
 #    {'name': 'Kristbjörg', 'kristbjorge21@ru.is'}
