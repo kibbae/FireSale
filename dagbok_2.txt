@@ -1,3 +1,16 @@
+##################################
+fimmtudaginn 5
+dæmatíma
+almost no git problem
+komið with lysandi post it
+
+tengjast back end and front end
+tengjast database
+models er i gangi
+user register login works :)
+
+Today was a good day!!!!!!!!!
+
 #################################
 miðvikudaginn 4
 lenda í vesen með git and venv
