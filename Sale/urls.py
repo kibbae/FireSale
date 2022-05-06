@@ -20,7 +20,7 @@ urlpatterns = [
     path('', include('FireSale.urls')),
     path('admin/', admin.site.urls),
     path('home/', include('FireSale.urls')),
-    path('user/', include('user.urls')),
+    path('profile/', include('user.urls')),
     path('product/', include('product.urls')),
     path('cart/', include('cart.urls'))
 
