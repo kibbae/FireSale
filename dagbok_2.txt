@@ -1,3 +1,11 @@
+###############################
+föstudagur 6 maí
+
+löguðum login/register og hvað birtist þegar þú loggar inn
+erum að vinna í models .. ekki alveg búið að klára það
+bredcrums komið í cart .. ekki alveg búið að klára það
+bættum aðeins við í html skrárnar .. á eftir að stilla css betur uppá lookið
+
 ##################################
 fimmtudaginn 5
 dæmatíma
@@ -20,19 +28,3 @@ fengum hjálp frá Ægir
 ##################################
 þriðjudaginn 5
 seinasta tilraun á þriðjudaginn
-
-
----
-KRISTBJÖRG todo
-apps fyrir users - td edit profile
-apps fyrir products - my products (create products, view all products)
-
-
-fellilisti
-Edit profile - user
-purchace history - products
-wishlist - products
-Bids/offers - products
-my products - products
-saved sellers - users ()
-logout
