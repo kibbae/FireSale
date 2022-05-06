@@ -22,6 +22,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
+          {% if user.is_authenticated %}
             <li class="dropdown" >
               <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -31,8 +32,7 @@
                   <li><a href="#">Bids/Offers</a></li>
                   <li><a href="{% url 'product' %}">My products</a></li>
                   <li><a href="#">Saved sellers</a></li>
-                  {% if user.is_authenticated %}
-                      <li><a href="{% url 'logout' %}">Logout</a></li>
+                  <li><a href="{% url 'logout' %}">Logout</a></li>
                   {% else %}
                       <li><a href="{% url 'login' %}">Login</a></li>
                       <li><a href="{% url 'register' %}">Register</a></li>
