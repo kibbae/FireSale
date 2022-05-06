@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+    <ol class="breadcrumb">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li class="active">Information</li>
+    </ol>
     <h2> Please fill out the following information: </h2>
     <input type="text" class="profile" placeholder="Full name...">
     <br>
@@ -10,4 +14,13 @@
     <input type="text" class="profile" placeholder="Country...">
     <br>
     <input type="text" class="profile" placeholder="Zip code...">
+    <br>
+    <h2> Payment information: </h2>
+    <input type="text" class="profile" placeholder="Cardholder name...">
+    <br>
+    <input type="text" class="profile" placeholder="Card number...">
+    <br>
+    <input type="text" class="profile" placeholder="CVC..."><input type="text" class="profile" placeholder="Expiration date...">
+    <br>
+    <button href="{% url 'shipping' %}">Continue</button>
 {% endblock %}
