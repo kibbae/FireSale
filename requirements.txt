@@ -2,3 +2,6 @@ asgiref==3.5.1
 Django==4.0.4
 psycopg2-binary==2.9.3
 sqlparse==0.4.2
+django-countries-with-calling-codes==0.1.1
+six==1.16.0
+django-utils-six==2.0

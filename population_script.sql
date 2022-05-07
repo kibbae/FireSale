@@ -1,3 +1,14 @@
+
+INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Ernabla', 'Erna', 'Bla', 'erna@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
+INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Stephanbla', 'Stephan', 'Bla', 'stephan@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
+INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Bryndisbla', 'Bryndis', 'Bla', 'bryndis@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
+
+INSERT INTO user_profile(profile_image, user_id) VALUES ('https://www.jeancoutu.com/catalog-images/888729/viewer/0/ferrero-canada-limited-ferrero-rocher-200-g.png', '6')
+INSERT INTO user_profile(profile_image, user_id) VALUES ('https://www.haribo.com/fileadmin/upload/USA/Startpage/products/cola_pack.png', '1')
+INSERT INTO user_profile(profile_image, user_id) VALUES ('https://cdn.shopify.com/s/files/1/0972/7116/products/haribo-happy-cola-bulk.png?v=1459346724', '3')
+INSERT INTO user_profile(profile_image, user_id) VALUES ('https://www.tictacuk.com/image/journal/article?img_id=18506308&t=1536579236701', '4')
+INSERT INTO user_profile(profile_image, user_id) VALUES ('https://www.tictacuk.com/image/journal/article?img_id=18506308&t=1536579236701', '7')
+
 INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
 INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
 INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
@@ -7,6 +18,10 @@ INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the
 INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
 INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
 
+INSERT INTO product_productcategory (name) VALUES('Chocolate');
+INSERT INTO product_productcategory (name) VALUES('Gummy');
+INSERT INTO product_productcategory (name) VALUES('Sour');
+INSERT INTO product_productcategory (name) VALUES('Toffee');
 
 INSERT INTO product_productimage (image, product_id) VALUES('http://www.nestle-family.com/uploads/product/615f12a8d73e42f395addd1e68af9bdc.png', 1);
 INSERT INTO product_productimage (image, product_id) VALUES('https://www.kitkat.com/images/kitkat-snap.png', 1);
