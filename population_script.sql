@@ -9,25 +9,25 @@ INSERT INTO user_profile(profile_image, user_id) VALUES ('https://cdn.shopify.co
 INSERT INTO user_profile(profile_image, user_id) VALUES ('https://www.tictacuk.com/image/journal/article?img_id=18506308&t=1536579236701', '4')
 INSERT INTO user_profile(profile_image, user_id) VALUES ('https://www.tictacuk.com/image/journal/article?img_id=18506308&t=1536579236701', '7')
 
-INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
-INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
-INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
-INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
-INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
-INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
-INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
-INSERT INTO product_product (name, long_description) VALUES('Shoe', 'this is the beginning of something');
+INSERT INTO product_product (name,description,long_description,product_category,seller,condition,on_sale,price) VALUES('Shoe', 'Nike','this is the beginning of something', 'clothes', 'kibba', 'good', 'True', '500');
+INSERT INTO product_product (name,description,long_description,product_category,seller,condition,on_sale,price) VALUES('Sweater', 'Puma', 'this is the beginning of something', 'clothes', 'kibba', 'good', 'True', '500');
+INSERT INTO product_product (name,description,long_description,product_category,seller,condition,on_sale,price) VALUES('Top', 'Zara', 'this is the beginning of something', 'clothes', 'kibba', 'good', 'True', '500');
+INSERT INTO product_product (name,description,long_description,product_category,seller,condition,on_sale,price) VALUES('Blanket', 'H&M home', 'this is the beginning of something', 'home', 'kibba', 'bad', 'True', '500');
+INSERT INTO product_product (name,description,long_description,product_category,seller,condition,on_sale,price) VALUES('Toy car', 'Cars', 'this is the beginning of something', 'toys', 'kibba', 'good', 'True', '500');
+INSERT INTO product_product (name,description,long_description,product_category,seller,condition,on_sale,price) VALUES('Shoe', 'this is the beginning of something');
+INSERT INTO product_product (name,description,long_description,product_category,seller,condition,on_sale,price) VALUES('Shoe', 'this is the beginning of something');
+INSERT INTO product_product (name,description,long_description,product_category,seller,condition,on_sale,price) VALUES('Shoe', 'this is the beginning of something');
 
-INSERT INTO product_productcategory (name) VALUES('Chocolate');
-INSERT INTO product_productcategory (name) VALUES('Gummy');
-INSERT INTO product_productcategory (name) VALUES('Sour');
-INSERT INTO product_productcategory (name) VALUES('Toffee');
+INSERT INTO product_productcategory (name) VALUES('clothes');
+INSERT INTO product_productcategory (name) VALUES('toys');
+INSERT INTO product_productcategory (name) VALUES('home');
 
-INSERT INTO product_productimage (image, product_id) VALUES('http://www.nestle-family.com/uploads/product/615f12a8d73e42f395addd1e68af9bdc.png', 1);
-INSERT INTO product_productimage (image, product_id) VALUES('https://www.kitkat.com/images/kitkat-snap.png', 1);
-INSERT INTO product_productimage (image, product_id) VALUES('https://theamericancandystore.co.uk/643-thickbox_default/hersheys-cookies-n-chocolate.jpg', 2);
-INSERT INTO product_productimage (image, product_id) VALUES('https://9044c4.medialib.edu.glogster.com/5gv8bPybSZp90oKKp5Y0/media/0f/0f96edc829ff81139d0ff34cead1d558f84ecccb/himom.png', 2);
-INSERT INTO product_productimage (image, product_id) VALUES('https://www.jeancoutu.com/catalog-images/888729/viewer/0/ferrero-canada-limited-ferrero-rocher-200-g.png', 3);
+
+INSERT INTO product_productimage (image, product_id) VALUES('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/skwgyqrbfzhu6uyeh0gg/air-max-270-mens-shoes-KkLcGR.png', 1);
+INSERT INTO product_productimage (image, product_id) VALUES('https://n.nordstrommedia.com/id/sr3/d067f8a3-2429-4561-86bd-a28bafd07379.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2', 2);
+INSERT INTO product_productimage (image, product_id) VALUES('https://static.zara.net/photos///2022/V/0/1/p/2320/453/250/2/w/1126/2320453250_6_1_1.jpg?ts=1651051703912', 3);
+INSERT INTO product_productimage (image, product_id) VALUES('https://design-milk.com/images/2022/02/cozythrowsroundup-featuredimage-studiovariously-salviathrow-designmilkshop.jpg', 4);
+INSERT INTO product_productimage (image, product_id) VALUES('https://m.media-amazon.com/images/I/71Phdb+rknL._AC_SL1500_.jpg', 5);
 INSERT INTO product_productimage (image, product_id) VALUES('https://talenthouse-res.cloudinary.com/image/upload/c_limit,h_1280,q_90,w_480/v1/invites/kv4pahmpydnmidlzroaj.png', 3);
 INSERT INTO product_productimage (image, product_id) VALUES('https://www.haribo.com/fileadmin/upload/USA/Startpage/products/cola_pack.png', 4);
 INSERT INTO product_productimage (image, product_id) VALUES('https://cdn.shopify.com/s/files/1/0972/7116/products/haribo-happy-cola-bulk.png?v=1459346724', 4);
