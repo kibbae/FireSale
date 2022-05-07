@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+from product.models import Product
 
 
 # user = [
@@ -20,3 +21,10 @@ def register(request):
     return render(request, 'user/register.html', {
         'form': UserCreationForm()
     })
+
+
+# Something from the video 8 around 30'
+# to filter product by name (return an array)
+# def index(request):
+#    Product.objects.filter(name__icontains=)
+#    return render(request, 'user/index.html')
