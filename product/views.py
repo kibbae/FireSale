@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from product.models import Product
 
-products = [
-    {'name': 'Hlaupaskór', 'price': 5000, 'description': 'mjúkir og góðir', 'long_description': 'æðislega góðir skór í hlaup' },
-    {'name': 'Inniskór', 'price': 1000, 'description': 'góðir', 'long_description': 'ver þig fyrir lego kubbum' }
-]
+#products = [
+    #{'name': 'Hlaupaskór', 'price': 5000, 'description': 'mjúkir og góðir', 'long_description': 'æðislega góðir skór í hlaup' },
+  #  {'name': 'Inniskór', 'price': 1000, 'description': 'góðir', 'long_description': 'ver þig fyrir lego kubbum' }
+#]
 
 
 # Create your views here.

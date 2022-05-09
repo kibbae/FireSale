@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
     <ol class="breadcrumb">
       <li><a href="{% url 'home' %}">Home</a></li>
-      <li class="active">Information</li>
+        <li><a href="{% url 'cart' %}">Information</a></li>
+      <li class="active">Shipping</li>
     </ol>
 
     <button>Continue</button>

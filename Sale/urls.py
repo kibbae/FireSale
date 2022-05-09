@@ -22,7 +22,6 @@ urlpatterns = [
     path('home/', include('FireSale.urls')),
     path('user/profile/', include('user.urls')),
     path('product/', include('product.urls')),
-    path('cart/', include('cart.urls')),
-    path('cart/shipping/', include('cart.urls'))
+    path('cart/', include('cart.urls'))
 
 ]
