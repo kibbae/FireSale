@@ -7,6 +7,6 @@
     {% for product_image in product.productimage_set.all %}
         <img src="{{ product_image.product }}" class="product-img" />
 
-
-    <a href="{% url 'delete_product' product.id  %}" class "block btn btn-primary">Delete product</a>
+    {% endfor %}
+    <a href="{% url 'delete_product' product.id  %}" class= "block btn btn-primary">Delete product</a>
 {% endblock %}
