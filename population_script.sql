@@ -1,4 +1,6 @@
 
+
+
 INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Ernabla', 'Erna', 'Bla', 'erna@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
 INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Stephanbla', 'Stephan', 'Bla', 'stephan@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
 INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Bryndisbla', 'Bryndis', 'Bla', 'bryndis@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
