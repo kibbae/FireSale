@@ -7,7 +7,7 @@ from django.db import models
 
 # Create your views here.
 def index(request):
-    context = {'users': User.objects.all().order_by('name')}
+   # context = {'users': User.objects.all().order_by('name')}
     return render(request, 'user/index.html', context={'users': 'users'})
 
 
