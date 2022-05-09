@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cart.css'%}" />
     <ol class="breadcrumb">
       <li><a href="{% url 'home' %}">Home</a></li>
       <li class="active">Information</li>

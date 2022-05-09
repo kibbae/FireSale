@@ -6,6 +6,18 @@
         <li><a href="{% url 'cart' %}">Information</a></li>
       <li class="active">Shipping</li>
     </ol>
-
-    <button>Continue</button>
+    <h1>Shipping</h1>
+        <input type="radio" id="html" name="fav_language" value="DHL">
+        <label for="html">DHL</label><br>
+        <small>1-2 working days</small><br>
+        <input type="radio" id="css" name="fav_language" value="FedEx">
+        <label for="css">FedEx</label><br>
+        <small>3-4 working days</small><br>
+        <input type="radio" id="javascript" name="fav_language" value="RoyalMail">
+        <label for="javascript">Royal Mail</label><br>
+        <small>6-12 working days</small><br>
+    <br>
+    <a type="submit" class="btn btn-default" href="{% url 'orderreview' %}" >
+            Continue
+        </a>
 {% endblock %}
