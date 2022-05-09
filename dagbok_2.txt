@@ -1,3 +1,17 @@
+###########################
+mánudagur 9.maí
+
+DB alveg að verða komið
+
+útlit orðið betra
+og navigation að verða komið líka..
+
+
+hjálp frá TA
+laga home-screen
+breyta dálk í DB og tengja saman
+ná í gögn úr db
+
 #############################
 laugardagur 7. maí
 
