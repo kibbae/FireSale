@@ -1,8 +1,20 @@
 h2 {
-    color: pink;
+    color: black;
     margin: 0 auto;
     width: 50%;
 }
 .profile {
-    color: aqua;
+    color: black;
+}
+
+input {
+    color: darkgray;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+textarea {
+    color: darkgray;
+    border-radius: 10px;
+    border: 1px solid gray;
 }
