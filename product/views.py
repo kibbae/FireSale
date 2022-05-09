@@ -1,21 +1,14 @@
-
 from django.shortcuts import render, get_object_or_404, redirect
-
 from product.forms.product_form import ProductCreateForm
 from product.models import Product, ProductImage
 from django.forms import ModelForm, widgets
 from django import forms
 
-#products = [
-    #{'name': 'Hlaupaskór', 'price': 5000, 'description': 'mjúkir og góðir', 'long_description': 'æðislega góðir skór í hlaup' },
-  #  {'name': 'Inniskór', 'price': 1000, 'description': 'góðir', 'long_description': 'ver þig fyrir lego kubbum' }
-#]
-
 
 # Create your views here.
-def index(request):
+def index(request, products='product'):
     context = {'products': Product.objects.all().order_by('name')}
-    return render(request, 'product/index.html', context={'products':products})
+    return render(request, 'product/index.html', context={'products': products})
 
 
 def get_product_by_id(request, id):
@@ -38,6 +31,7 @@ def create_product(request):
     return render(request, 'product/create_product.html',{
         'form': form
     })
+
 
 def delete_product(request, id):
     product = get_object_or_404(Product, pk=id)
