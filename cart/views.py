@@ -5,3 +5,6 @@ def index(request):
 
 def shipping(request):
     return render(request, 'cart/shipping.html')
+
+def orderreviw(request):
+    return render(request, 'cart/orderrew.html')
