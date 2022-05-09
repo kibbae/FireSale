@@ -9,4 +9,5 @@
 
     {% endfor %}
     <a href="{% url 'delete_product' product.id  %}" class= "block btn btn-primary">Delete product</a>
+    <a href="{% url 'update_product' product.id  %}" class= "block btn btn-primary">Update product</a>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from product.forms.product_form import ProductCreateForm
+from product.forms.product_form import ProductCreateForm, ProductUpdateForm
 from product.models import Product, ProductImage
 from django.forms import ModelForm, widgets
 from django import forms
@@ -37,3 +37,20 @@ def delete_product(request, id):
     product = get_object_or_404(Product, pk=id)
     product.delete()
     return redirect('product-index')
+
+
+def update_product(request, id):
+    instance = get_object_or_404(Product, pk=id)
+    if request.method == 'POST':
+        form = ProductUpdateForm(data = request.POST, instance = instance)
+        if form.is_valid():
+            form.save()
+            return redirect('get_product_by_id', id = id)
+
+    else:
+        form = ProductUpdateForm(instance = instance)
+
+    return render(request, 'product/update_product.html',{
+        'form': form,
+        'id': id
+    })
