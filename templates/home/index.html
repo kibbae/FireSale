@@ -3,5 +3,13 @@
 {% block content %}
     <dif class="home-page">
         <h2> Popular products </h2>
+    {% for product in products %}
+        {% include 'product/single_product.html' with product=product %}
+        <!-- from video 8 around 38'-->
+    <h4> {{product.name}}</h4>
+    <p> {{ product.price }}</p>
+    <h4> {{ product.description }}</h4>
+    <h4> {{ product.long_description }}</h4>
+    {% endfor %}
     </dif>
 {% endblock %}
