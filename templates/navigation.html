@@ -28,10 +28,8 @@
               <ul class="dropdown-menu">
                 <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="#">Purchase history</a></li>
-                <li><a href="#">Wishlist</a></li>
-                  <li><a href="#">Bids/Offers</a></li>
+                  <li><a href="{% url 'offer' %}">Bids/Offers</a></li>
                   <li><a href="{% url 'products' %}">My products</a></li>
-                  <li><a href="#">Saved sellers</a></li>
                   <li><a href="{% url 'logout' %}">Logout</a></li>
                   {% else %}
                       <li><a href="{% url 'login' %}">Login</a></li>
