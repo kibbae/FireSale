@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>{{ product.name }}</h1>
-    <p>{{ product.description }}</p>
-    <p>€{{ product.price }}</p>
+    <h4>{{ product.description }}</h4>
+    <p>{{ product.long_description }}</p>
+    <h3>€{{ product.price }}</h3>
 
     {% for product_image in product.productimage_set.all %}
-        <img src="{{ product_image.product }}" class="product-img" />
+        <img src="{{ product_image.image }}" class="product-img" />
 
     {% endfor %}
+    <br>
+    <a href="{% url 'make-offer' product.id  %}" class= "block btn btn-primary">Place an offer</a>
+    <br>
     <a href="{% url 'delete-product' product.id  %}" class= "block btn btn-primary">Delete product</a>
+    <br>
     <a href="{% url 'update-product' product.id  %}" class= "block btn btn-primary">Update product</a>
 
 {% endblock %}

@@ -10,14 +10,21 @@ body {
     background-color: #FFC989;
 }
 
-.well-product{
-    border: 1px solid black;
-    width: 200px;
+.col-sm-6-col-md-4{
+    float: left;
+    width: 23%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#propic{
+    height: 200px;
 }
 
 .product-img{
     border: 1px solid #FFEFDD;
-    width: 150px;
+    width: 200px;
 }
 
 

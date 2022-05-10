@@ -25,7 +25,6 @@ def index(request):
 
 # products/3
 def get_product_by_id(request, id):
-    print("hello")
     return render(request, 'product/product_details.html', {
         'product': get_object_or_404(Product, pk=id)
     })
@@ -40,7 +39,8 @@ def create_product(request):
             product = form.save()
             product_image = ProductImage(image=request.POST['image'], product=product)
             product_image.save()
-            return redirect(product - index)
+            # return redirect(product-index)
+            return redirect('products')
     else:
         form = ProductCreateForm()
     return render(request, 'product/create_product.html', {
@@ -65,12 +65,19 @@ def update_product(request, id):
         form = ProductUpdateForm(data=request.POST, instance=instance)
         if form.is_valid():
             form.save()
-            return redirect('product-details', id=id)
-
+            # return redirect('product-details', id = id)
+            return redirect('products')
     else:
         form = ProductUpdateForm(instance=instance)
 
     return render(request, 'product/update_product.html', {
         'form': form,
         'id': id
+    })
+
+
+@login_required
+def make_offer(request, id):
+    return render(request, 'product/make_offer.html', {
+        'product': get_object_or_404(Product, pk=id)
     })

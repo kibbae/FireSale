@@ -19,9 +19,9 @@
     {% include 'navigation.html' %}
     <main>
     {% block content %}
-        <h2> Popular products </h2>
-                <dif class="home-page">
 
+                <dif class="home-page">
+            <h2> Popular products </h2>
             {% for product in products %}
                 {% include 'product/single_product.html' with product=product %}
                 <!-- from video 8 around 38'-->
