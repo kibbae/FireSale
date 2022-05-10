@@ -10,13 +10,13 @@ body {
     background-color: #FFC989;
 }
 
-.well product{
+.well-product{
     border: 1px solid black;
-    width: 20px;
+    width: 200px;
 }
 
 .product-img{
-    border: 1px solid black;
+    border: 1px solid #FFEFDD;
     width: 150px;
 }
 
