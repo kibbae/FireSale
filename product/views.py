@@ -51,7 +51,7 @@ def update_product(request, id):
         form = ProductUpdateForm(data = request.POST, instance = instance)
         if form.is_valid():
             form.save()
-            return redirect('get_product_by_id', id = id)
+            return redirect('product-details', id = id)
 
     else:
         form = ProductUpdateForm(instance = instance)
