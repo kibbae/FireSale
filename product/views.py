@@ -6,9 +6,9 @@ from django import forms
 
 
 # /products
-def index(request, products='product'):
+def index(request):
     context = {'products': Product.objects.all().order_by('name')}
-    return render(request, 'product/index.html', context={'products': products})
+    return render(request, 'product/index.html', context=context)
 
 
 # products/3
