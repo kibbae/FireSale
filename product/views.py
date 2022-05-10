@@ -14,7 +14,6 @@ def index(request):
 
 # products/3
 def get_product_by_id(request, id):
-    print("hello")
     return render(request, 'product/product_details.html', {
         'product': get_object_or_404(Product, pk=id)
     })
@@ -66,10 +65,9 @@ def update_product(request, id):
         'id': id
     })
 
+
 @login_required
 def make_offer(request, id):
-    print(1)
-    print("hello")
     return render(request, 'product/make_offer.html', {
         'product': get_object_or_404(Product, pk=id)
     })
