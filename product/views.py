@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from product.forms.product_form import ProductCreateForm, ProductUpdateForm
 from product.models import Product, ProductImage
@@ -21,6 +22,7 @@ def get_product_by_id(request, id):
 
 # video 9
 # products/create_product
+@login_required
 def create_product(request):
     if request.method == 'POST':
         form= ProductCreateForm(data=request.POST)
@@ -37,6 +39,7 @@ def create_product(request):
 
 
 # products/delete_product/4
+@login_required
 def delete_product(request, id):
     product = get_object_or_404(Product, pk=id)
     product.delete()
@@ -45,6 +48,7 @@ def delete_product(request, id):
 
 
 # products/update_product/4
+@login_required
 def update_product(request, id):
     instance = get_object_or_404(Product, pk=id)
     if request.method == 'POST':

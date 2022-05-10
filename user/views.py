@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, User
 from django.shortcuts import render, redirect
 from product.models import Product
@@ -22,7 +23,7 @@ def register(request):
         'form': UserCreationForm()
     })
 
-
+@login_required
 def index(request):
     print("hello")
     profile = Profile.objects.filter(user=request.user).first()
