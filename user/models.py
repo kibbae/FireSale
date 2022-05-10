@@ -13,6 +13,7 @@ class Profile(models.Model):
     bio = models.CharField(max_length=999, default='')
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = models.CharField(max_length=9999, default='https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png')
+    # favorite_product = models.ForeignKey(Product, on_delete=models.CASCADE())
     # status_log = models.BooleanField(default=False)
 
 
