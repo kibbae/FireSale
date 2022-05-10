@@ -1,0 +1,5 @@
+video 10 + 11 @login_required
+home page display catalog
+some css on the catalog so the catalog don't overview
+
+fixed product detail create update (after @login required 
