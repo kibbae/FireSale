@@ -36,7 +36,7 @@ def create_product(request):
 def delete_product(request, id):
     product = get_object_or_404(Product, pk=id)
     product.delete()
-    return redirect('product-index')
+    return redirect('products') # need to redirect to the name '' registered in the views
 
 
 def update_product(request, id):
