@@ -24,7 +24,6 @@ def register(request):
 
 
 def index(request):
-    print("hello")
     profile = Profile.objects.filter(user=request.user).first()
     if request.method == "POST":
         form = ProfileForm(instance=profile, data=request.POST)

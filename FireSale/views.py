@@ -13,4 +13,3 @@ def index(request):
 # Til að sjá ekki ef ekki loggaður inn
 # @login_required
 # def blabla():
-# pass
