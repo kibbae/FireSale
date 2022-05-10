@@ -1,15 +1,13 @@
 
 
 
-INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Ernabla', 'Erna', 'Bla', 'erna@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
-INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Stephanbla', 'Stephan', 'Bla', 'stephan@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
-INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Bryndisbla', 'Bryndis', 'Bla', 'bryndis@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
+INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'ErnaS', 'Erna', 'Stefansdottir', 'erna@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
+INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'GunnaH', 'Gunna', 'Halldorsdottir', 'gunna@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
+INSERT INTO auth_user (password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES ('bla', '2022-05-06 23:45:47','False', 'Siggak', 'Sigga', 'Karlsdottir', 'bryndis@gmail.com', 'False', 'False', '2022-05-06 23:45:47')
 
-INSERT INTO user_userprofile(profile_image, user_id) VALUES ('https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2021_07/2233721/171120-smile-stock-njs-333p.jpg', '1')
-INSERT INTO user_userprofile(profile_image, user_id) VALUES ('https://img.freepik.com/free-photo/handsome-smiling-young-african-man_171337-9650.jpg?t=st=1652093747~exp=1652094347~hmac=118a4679faea8692112ddb6b1a1e63f7b45acaa60b4f0b58bec9482b4436d7bf&w=1800', '2')
-INSERT INTO user_userprofile(profile_image, user_id) VALUES ('https://img.freepik.com/free-photo/beautiful-young-woman-face-closeup-portrait-studio-background-white_100800-8529.jpg?w=826', '3')
-
-INSERT INTO user_profile(profile_image, user_id) VALUES
+INSERT INTO user_profile(name, email, bio, profile_image, user_id) VALUES ('ErnaS', 'erna@gmail.com', 'elska að kaupa skó', 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2021_07/2233721/171120-smile-stock-njs-333p.jpg', '1')
+INSERT INTO user_profile(name, email, bio, profile_image, user_id) VALUES ('GunnaH', 'gunna@gmail.com', 'elska að kaupa teppi', 'https://img.freepik.com/free-photo/handsome-smiling-young-african-man_171337-9650.jpg?t=st=1652093747~exp=1652094347~hmac=118a4679faea8692112ddb6b1a1e63f7b45acaa60b4f0b58bec9482b4436d7bf&w=1800', '2')
+INSERT INTO user_profile(name, email, bio, profile_image, user_id) VALUES ('SiggaK', 'sigga@gmail.com', 'elska að kaupa allt', 'https://img.freepik.com/free-photo/beautiful-young-woman-face-closeup-portrait-studio-background-white_100800-8529.jpg?w=826', '3')
 
 
 
