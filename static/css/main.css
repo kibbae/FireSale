@@ -8,4 +8,9 @@ body {
 
 .dropdown-menu {
     background-color: #FFC989;
+}
 
+.well product{
+    border: 1px solid black;
+    width: 40px;
+}
