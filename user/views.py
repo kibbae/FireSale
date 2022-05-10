@@ -24,7 +24,7 @@ def register(request):
     })
 
 @login_required
-def index(request):
+def edit(request):
     profile = Profile.objects.filter(user=request.user).first()
     if request.method == "POST":
         form = ProfileForm(instance=profile, data=request.POST)
@@ -33,7 +33,7 @@ def index(request):
             profile.user = request.user
             profile.save()
             return redirect('profile')
-    return render(request, 'user/index.html', {
+    return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=profile)
     })
 

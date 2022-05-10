@@ -1,22 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class="profile">
-        <h2> Hallo user ! </h2>
-        <h4 class="profile">Name</h4>
-        <input type="text" class="profile" placeholder="Sebastian Stan">
-        <h4 id="bio">Bio</h4>
-        <textarea name="bio" rows="10" cols="50">Sebastian Stan (born August 13, 1982) is a Romanian and American actor. He gained recognition for his role as Bucky Barnes / Winter Soldier in the Marvel Cinematic Universe media franchise, beginning with 2011's Captain America: The First Avenger. He went on to play the part in the films Captain America: The Winter Soldier (2014), Captain America: Civil War (2016), Avengers: Infinity War (2018), Avengers: Endgame (2019); and the miniseries The Falcon and the Winter Soldier (2021).</textarea>
-        <br>
-        <button>Save changes</button>
-        <a type="submit" class="btn btn-default">
-            Save changes
-        </a>
-    </div>
-    <h1>Profile</h1>
     <form class="form form-horizontal" method="post">
         {% csrf_token %}
         {{ form }}
-    <input type="submit" class="btn btn-primary" value="Update"/>
+        <input type="submit" class="btn btn-primary" value="Update"/>
     </form>
 {% endblock %}

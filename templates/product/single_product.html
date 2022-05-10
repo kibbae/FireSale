@@ -2,12 +2,15 @@
 
   <div class="col-sm-6-col-md-4">
     <div class="thumbnail">
-      <img class="product-img" src="{{ product.productimage_set.first.image }}" id="propic"/>
+
       <div class="caption">
         <a href="/products/{{ product.id }}">
-            <h4>{{ product.name }}</h4>
+        <img class="product-img" src="{{ product.productimage_set.first.image }}" id="propic"/>
+            <h4>{{ product.name }}</h4></a>
             <p>{{ product.description }}</p>
-        <p><a href="#" class="btn btn-primary" role="button">Make Offer</a>
+            {% if user.is_authenticated %}
+        <p><a href="{% url 'make-offer' product.id  %}" class="btn btn-primary" role="button" id="mkoffbutt">Make Offer</a>
+            {% endif %}
       </div>
     </div>
   </div>
