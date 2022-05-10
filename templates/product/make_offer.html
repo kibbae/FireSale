@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <a href="/products/{{ product.id }}">
+        <h4>Please enter the amount of your offer:</h4>
+        <h4>{{ product.name }}</h4>
+        <p>{{ product.description }}</p>
+    </a>
+
+{% endblock %}

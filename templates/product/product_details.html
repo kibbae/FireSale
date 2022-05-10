@@ -9,7 +9,10 @@
 
     {% endfor %}
     <br>
+    <a href="{% url 'make-offer' product.id  %}" class= "block btn btn-primary">Place an offer</a>
+    <br>
     <a href="{% url 'delete-product' product.id  %}" class= "block btn btn-primary">Delete product</a>
+    <br>
     <a href="{% url 'update-product' product.id  %}" class= "block btn btn-primary">Update product</a>
 
 {% endblock %}
