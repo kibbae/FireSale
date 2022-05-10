@@ -21,7 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', include('FireSale.urls')),
     path('user/profile/', include('user.urls')),
-    path('product/', include('product.urls')),
-    path('cart/', include('cart.urls'))
+    path('products/', include('product.urls')),
+    path('cart/', include('cart.urls')),
+    path('offers/', include('offer.urls'))
 
 ]

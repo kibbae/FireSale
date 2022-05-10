@@ -1,15 +1,14 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, User
 from django.shortcuts import render, redirect
 from product.models import Product
+from user.models import Profile, UserPayment, UserAddress
+from django.db import models
 
-
-# user = [
-#    {'name': 'Kristbjörg', 'kristbjorge21@ru.is'}
-# ]
 
 # Create your views here.
 def index(request):
-    return render(request, 'user/index.html')
+   # context = {'users': User.objects.all().order_by('name')}
+    return render(request, 'user/index.html', context={'users': 'users'})
 
 
 def register(request):

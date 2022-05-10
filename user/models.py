@@ -10,15 +10,10 @@ class Profile(models.Model):
     """Core of a user, contains basic datas from "sign up / register a new User" """
     name = models.CharField(max_length=25)
     email = models.EmailField(blank=True)
+    bio = models.CharField(max_length=999, default='')
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_image = models.CharField(max_length=9999, default='https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png')
     # status_log = models.BooleanField(default=False)
-
-
-class UserProfile(models.Model):
-    """Contains extra info that are going to be display in the profile.
-    A user can exist without a picture, so it's a different class."""
-    user = models.OneToOneField(Profile, on_delete=models.CASCADE)
-    # favorite_product =  models.ForeignKey(Product, on_delete=CASCADE)
-    profile_image = models.CharField(max_length=9999)
 
 
 class UserAddress(models.Model):
