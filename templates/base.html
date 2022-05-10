@@ -19,6 +19,14 @@
     {% include 'navigation.html' %}
     <main>
     {% block content %}
+                <dif class="home-page">
+                <h2> Popular products </h2>
+            {% for product in Products %}
+                {% include 'product/single_product.html' with product=product %}
+                <!-- from video 8 around 38'-->
+
+            {% endfor %}
+            </dif>
     {% endblock %}
     </main>
     <!-- Latest compiled and minified JavaScript -->
