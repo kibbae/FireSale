@@ -13,6 +13,7 @@ def index(request, products='product'):
 
 # products/3
 def get_product_by_id(request, id):
+    print("hello")
     return render(request, 'product/product_details.html', {
         'product': get_object_or_404(Product, pk=id)
     })
