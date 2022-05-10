@@ -3,10 +3,13 @@
 {% block content %}
 
 
-    <a href="/products/{{ product.id }}">
+
         <h4>Please enter the amount of your offer:</h4>
+        <input type="text" class="offer" placeholder="Make offer">
+        <a href="/products/{{ product.id }}">
         <h4>{{ product.name }}</h4>
         <p>{{ product.description }}</p>
-    </a>
+        <img class="product-img" src="{{ product.productimage_set.first.image }}" id="propic"/>
+</a>
 
 {% endblock %}

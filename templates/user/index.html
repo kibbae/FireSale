@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <h1>Profile</h1>
-    <form class="form form-horizontal" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" class="btn btn-primary" value="Update"/>
-    </form>
+    <dev class="MyProfile">
+    <h1 class="MyProfile">My Profile</h1>
+    <img src="{{ user.profile.profile_image }}" class="MyProfile" id="nav_profile_image"/>
+    <h3 class="MyProfile">{{ user.profile.name }}</h3>
+    <p class="MyProfile">{{ user.profile.bio }}</p>
+        </dev>
+    <a href="{% url 'editprofile' %}" class="MyProfile">Edit Profile </a>
 {% endblock %}

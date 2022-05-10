@@ -27,4 +27,12 @@ body {
     width: 200px;
 }
 
+#mkoffbutt{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.MyProfile{
+    padding-left: 10px;
+}
 
