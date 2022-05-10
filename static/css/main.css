@@ -12,5 +12,12 @@ body {
 
 .well product{
     border: 1px solid black;
-    width: 40px;
+    width: 20px;
 }
+
+.product-img{
+    border: 1px solid black;
+    width: 150px;
+}
+
+
