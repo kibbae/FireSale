@@ -37,10 +37,11 @@ def create_product(request):
         form = ProductCreateForm(data=request.POST)
         if form.is_valid():
             product = form.save()
-            product.seller = request.user
+            product.seller = request.user.id
+            product.save()
             product_image = ProductImage(image=request.POST['image'], product=product)
             product_image.save()
-            product.save()
+
             # return redirect(product-index)
             return redirect('products')
     else:
