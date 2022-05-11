@@ -31,7 +31,6 @@ def get_product_by_id(request, id):
     })
 
 
-# video 9
 # products/create_product
 def create_product(request):
     if request.method == 'POST':
@@ -50,22 +49,6 @@ def create_product(request):
         'form': form
     })
 
-# video 9
-# products/create_product
-# @login_required
-# def create_product(request):
-#     if request.method == 'POST':
-#         form= ProductCreateForm(data=request.POST)
-#         if form.is_valid():
-#             product = form.save()
-#             product.seller = request.user
-#             product_image = ProductImage(image= request.POST['image'], product=product)
-#             product_image.save()
-#             product.seller.save()
-#
-#             # return redirect(product-index)
-#
-#             return redirect('products')
 
 # products/delete_product/4
 def delete_product(request, id):
@@ -95,8 +78,22 @@ def update_product(request, id):
     })
 
 
+# products/make_offer/4
 @login_required
 def make_offer(request, id):
+    if request.method == 'POST':
+        form = ProductCreateForm(data=request.POST)
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.seller = request.user
+            product.save()
+            product_image = ProductImage(image=request.POST['image'], product=product)
+            product_image.save()
+            return redirect('products')
+    else:
+        form = ProductCreateForm()
+
     return render(request, 'product/make_offer.html', {
+        'form'
         'product': get_object_or_404(Product, pk=id)
     })
