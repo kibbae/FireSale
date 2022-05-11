@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from product.forms.product_form import ProductCreateForm, ProductUpdateForm
+from product.forms.product_form import ProductCreateForm, ProductUpdateForm, MakeOfferForm
 from product.models import Product, ProductImage
 from django.forms import ModelForm, widgets
 from django import forms
@@ -82,18 +82,28 @@ def update_product(request, id):
 @login_required
 def make_offer(request, id):
     if request.method == 'POST':
-        form = ProductCreateForm(data=request.POST)
+        form = MakeOfferForm(data=request.POST)
         if form.is_valid():
-            product = form.save(commit=False)
-            product.seller = request.user
-            product.save()
-            product_image = ProductImage(image=request.POST['image'], product=product)
-            product_image.save()
+            offer = form.save(commit=False)
+            offer.buyer = request.user
+            offer.product = Product.objects.get(pk=id)
+            offer.save()
             return redirect('products')
     else:
-        form = ProductCreateForm()
+        form = MakeOfferForm()
 
     return render(request, 'product/make_offer.html', {
         'form'
-        'product': get_object_or_404(Product, pk=id)
+        'id': id
     })
+
+
+# product/order_product_by/
+def order_by(request, name):
+    products = Product.objects.all()
+    #    context = Product.objects.order_by('name')
+    order_product_by = request.GET.get('order by')
+    if order_product_by:
+        products = products.order_by(order_product_by)
+    context = {'products': products}
+    return render(request, 'product/index.html', context)
