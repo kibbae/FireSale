@@ -97,6 +97,6 @@ def update_product(request, id):
 
 @login_required
 def make_offer(request, id):
-    return render(request, 'product/make_offer.html', {
+    return render(request, 'product/máhenda.make_offer.html', {
         'product': get_object_or_404(Product, pk=id)
     })
