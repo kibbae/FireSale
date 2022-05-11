@@ -36,8 +36,8 @@ def create_product(request):
     if request.method == 'POST':
         form = ProductCreateForm(data=request.POST)
         if form.is_valid():
-            product = form.save()
-            product.seller = request.user.id
+            product = form.save(commit=False)
+            product.seller = request.user
             product.save()
             product_image = ProductImage(image=request.POST['image'], product=product)
             product_image.save()
