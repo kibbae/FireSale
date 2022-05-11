@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
-from product.models import Product
-# from django_countries.fields import CountryField
+
+
 
 
 # we can not use "User" as it's an inbuilt model in Django
