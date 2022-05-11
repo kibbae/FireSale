@@ -1,5 +1,6 @@
 # created by virtualenv automatically
 venv
+env
 .idea
 .DS_Store
 django/.DS_Store
