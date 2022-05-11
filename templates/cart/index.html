@@ -6,27 +6,33 @@
       <li><a href="{% url 'home' %}">Home</a></li>
       <li class="active">Information</li>
     </ol>
+    <hr>
     <h2> Please fill out the following information: </h2>
+    <br>
     <input type="text" class="profile" placeholder="Full name...">
-    <br>
+    <br><br>
     <input type="text" class="profile" placeholder="Street name...">
-    <br>
+    <br><br>
     <input type="text" class="profile" placeholder="City...">
-    <br>
+    <br><br>
      <input type="text" class="profile" placeholder="Zip code...">
-    <br>
+    <br><br>
     <select class="selectpicker countrypicker" data-default="IS"></select>
     <br>
-
+    <hr>
     <h2> Payment information: </h2>
+    <br>
     <input type="text" class="profile" placeholder="Cardholder name...">
-    <br>
+    <br><br>
     <input type="text" class="profile" placeholder="Card number...">
-    <br>
-    <input type="text" class="profile" placeholder="CVC..."><input type="text" class="profile" placeholder="Expiration date...">
-    <br>
+    <br><br>
+    <input type="text" class="profile" placeholder="CVC...">
+    <br><br>
+    <input type="text" class="profile" placeholder="Expiration date...">
+    <br><br>
 
     <a type="submit" class="btn btn-default" href="{% url 'shipping' %}" >
             Continue
         </a>
+
 {% endblock %}

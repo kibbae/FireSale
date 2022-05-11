@@ -1,7 +1,7 @@
+import timestamp as timestamp
 from django.forms import ModelForm, widgets
 from django import forms
 from product.models import Product
-
 
 # video 9
 
@@ -31,6 +31,17 @@ class ProductUpdateForm(ModelForm):
             'price': widgets.NumberInput(attrs={'class': 'form-control'}),
             'category': widgets.Select(attrs={'class': 'form-control'}),
         }
+
+#
+# class MakeOfferForm(ModelForm):
+#
+#     class Meta:
+#         model = Offer
+#         exclude = ['id', 'accepted', 'buyer', 'item']
+#         widgets = {
+#             'price': widgets.TextInput(attrs={'class': 'form-control'}),
+#             'message': widgets.TextInput(attrs={'class': 'form-control'})
+#         }
 
 
 class MakeOfferForm(ModelForm):

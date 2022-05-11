@@ -81,23 +81,6 @@ def update_product(request, id):
 # products/make_offer/4
 @login_required
 def make_offer(request, id):
-<<<<<<< HEAD
-    return render(request, 'product/máhenda.make_offer.html', {
-=======
-    if request.method == 'POST':
-        form = ProductCreateForm(data=request.POST)
-        if form.is_valid():
-            product = form.save(commit=False)
-            product.seller = request.user
-            product.save()
-            product_image = ProductImage(image=request.POST['image'], product=product)
-            product_image.save()
-            return redirect('products')
-    else:
-        form = ProductCreateForm()
-
-    return render(request, 'product/make_offer.html', {
-        'form'
->>>>>>> cf1caca (form make offer+ product models + delete app offer)
         'product': get_object_or_404(Product, pk=id)
     })
+# breytti html slóðinni í rétt
