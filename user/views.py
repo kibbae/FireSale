@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, User
 from django.shortcuts import render, redirect
 from product.models import Product
 from user.forms.profile_form import ProfileForm
-from user.models import Profile, UserPayment, UserAddress
+from user.models import Profile
 from django.db import models
 
 
