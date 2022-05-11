@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div class="products">
             {% for product in products %}
 
                 {% include 'product/single_product.html' with product=product %}
                 <!-- from video 8 around 38'-->
 
             {% endfor %}
-       <!-- <div class="products"></div> -->
+       </div>
 {% endblock %}
