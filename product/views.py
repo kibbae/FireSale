@@ -97,6 +97,7 @@ def update_product(request, id):
 
 @login_required
 def make_offer(request, id):
-    return render(request, 'product/máhenda.make_offer.html', {
+    return render(request, 'product/product_details.html', {
         'product': get_object_or_404(Product, pk=id)
     })
+# breytti html slóðinni í rétt
