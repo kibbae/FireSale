@@ -1,4 +1,16 @@
 ###########################
+þriðjudaginn 10.maí
+
+dæmatíma
+create update delete product redirection fixed :)
+catalogue display on homepage nicely coming (html css fixed)
+@login_required implemented
+begin on working on search by price/by name
+
+vesen með request.user to associate the logged user as a seller when create_product
+vesen on display depending on the browser
+
+###########################
 mánudagur 9.maí
 
 DB alveg að verða komið
