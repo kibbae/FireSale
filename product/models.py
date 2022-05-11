@@ -15,7 +15,7 @@ class Product(models.Model):
     description = models.CharField(max_length=100)
     long_description = models.TextField(max_length=999, blank=True)
     product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
-    seller = models.ForeignKey(User, on_delete=models.CASCADE, default='1')
+    seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name='seller')
     # by default, for "create-product", the user seller will be id 1
     condition = models.CharField(max_length=100)
     on_sale = models.BooleanField(default=True)
