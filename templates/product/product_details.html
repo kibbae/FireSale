@@ -10,10 +10,10 @@
 
     {% endfor %}
     <br>
-    <h3>Current highest offer is : blabla </h3>
+    <h3>Current highest offer is : {{ product.price }}</h3>
     {% if user.is_authenticated %}
-    <input type="text" class="offer" placeholder="10.0">
-    <a href="{% url 'make-offer' product.id  %}" class= "block btn btn-primary" >Place an offer</a>
+    <input type="text" class="offer" placeholder={{ product.price }}>
+    <a href="" class= "block btn btn-primary" >Place an offer</a>
     <br>
         <br>
     <a href="{% url 'delete-product' product.id  %}" class= "block_btn_btn-primary">Delete product</a>

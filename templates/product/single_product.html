@@ -6,11 +6,9 @@
       <div class="caption">
         <a href="/products/{{ product.id }}">
         <img class="product-img" src="{{ product.productimage_set.first.image }}" id="propic"/>
-            <h4>{{ product.name }}</h4></a>
-            <p>{{ product.description }}</p>
-            {% if user.is_authenticated %}
-        <p><a href="{% url 'make-offer' product.id  %}" class="btn btn-primary" role="button" id="mkoffbutt">Make Offer</a>
-            {% endif %}
+            <h4 class="single-item">{{ product.name }}</h4></a>
+            <p class="single-item">{{ product.description }}</p>
+
       </div>
     </div>
   </div>
