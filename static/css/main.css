@@ -6,17 +6,26 @@ body {
     background-color: #FFC989;
 }
 
+#footer{
+    background-color: #FFC989;
+    float: bottom!important;
+}
+
 .dropdown-menu {
     background-color: #FFC989;
 }
 
-main{
+main {
     margin: 10px 50px;
     text-align: center;
 }
 
+#main-content {
+    display: block;
+}
+
 .col-sm-6-col-md-4{
-    float: left;
+    display: inline-block;
     width: 23%;
     margin-left: 10px;
     margin-right: 10px;
@@ -38,4 +47,6 @@ main{
 hr {
   border-top: 1px dotted black;
 }
-
+#dotted{
+    border-top: 1px dotted gray;
+}

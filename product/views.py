@@ -36,8 +36,29 @@ def index(request):
 
 # products/3
 def get_product_by_id(request, id):
+    product = get_object_or_404(Product, pk=id)
+    # User is submitting a form
+    if request.method == 'POST':
+        form = MakeOfferForm(data=request.POST)
+        # The form is valid
+        if form.is_valid():
+            offer = form.save(commit=False)
+            offer.buyer = request.user
+            offer.product = Product.objects.get(pk=id)
+            offer.save()
+            return redirect('products')
+
+        # The form is invalid, send form back with errors
+        return render(request, 'product/product_details.html', {
+            'product': product,
+            'form': form,
+        })
+
+    # Send empty form to user
+    form = MakeOfferForm(initial={'price': product.price})
     return render(request, 'product/product_details.html', {
-        'product': get_object_or_404(Product, pk=id)
+        'product': product,
+        'form': form,
     })
 
 
@@ -91,18 +112,26 @@ def update_product(request, id):
 # products/make_offer/4
 @login_required
 def make_offer(request, id):
+    # User is submitting a form
     if request.method == 'POST':
         form = MakeOfferForm(data=request.POST)
+        # The form is valid
         if form.is_valid():
             offer = form.save(commit=False)
             offer.buyer = request.user
             offer.product = Product.objects.get(pk=id)
             offer.save()
             return redirect('products')
-    else:
-        form = MakeOfferForm()
 
+        # The form is invalid, send form back with errors
+        return render(request, 'product/product_details.html', {
+            'form': form,
+            'id': id
+        })
+
+    # Send empty form to user
+    form = MakeOfferForm()
     return render(request, 'product/product_details.html', {
-        'form'
+        'form': form,
         'id': id
     })
