@@ -92,19 +92,7 @@ def make_offer(request, id):
     else:
         form = MakeOfferForm()
 
-    return render(request, 'product/make_offer.html', {
+    return render(request, 'product/product_details.html', {
         'form'
         'id': id
-    })
-
-
-# product/order_product_by/
-def order_by(request, name):
-    products = Product.objects.all()
-    #    context = Product.objects.order_by('name')
-    order_product_by = request.GET.get('order by')
-    if order_product_by:
-        products = products.order_by(order_product_by)
-    context = {'products': products}
-    return render(request, 'product/index.html', context)
-
+    }
