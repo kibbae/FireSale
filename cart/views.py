@@ -7,8 +7,8 @@ def index(request):
     if request.method == 'POST':
         form = CheckOutFormAddreess(data=request.POST)
         if form.is_valid():
-            Address = form.save(commit=False)
-            Address.save()
+            address = form.save(commit=False)
+            address.save()
             return redirect('payment')
     else:
         form = CheckOutFormAddreess()
@@ -20,17 +20,17 @@ def payment(request):
     if request.method == 'POST':
         form = CheckOutFormPayment(data=request.POST)
         if form.is_valid():
-            Payment = form.save(commit=False)
-            Payment.save()
-            return redirect('shipping')
+            payment = form.save(commit=False)
+            payment.save()
+            return redirect('orderreview')
     else:
         form = CheckOutFormPayment()
     return render(request, 'cart/payment.html', {
         'form': form
     })
 
-def shipping(request):
-    return render(request, 'cart/shipping.html')
+#def shipping(request):
+ #   return render(request, 'cart/shipping.html')
 
 
 def orderreviw(request):
