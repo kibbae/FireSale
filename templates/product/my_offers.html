@@ -4,15 +4,11 @@
 
 <hr id="dotted">
     <h3>My bids/offers</h3>
-            {% for offer in offers %}
-                {% if offer.buyer_id == user.id %}
+            {% for product in products %}
 
-                        {% include 'product/single_product.html' with offer=offer %}
+                        {% include 'product/single_offer.html' with product=product %}
 
-                {% endif %}
             {% endfor %}
        </div>
 
 {% endblock %}
-
-

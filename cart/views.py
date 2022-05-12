@@ -8,6 +8,7 @@ def index(request):
         form = CheckOutFormAddreess(data=request.POST)
         if form.is_valid():
             address = form.save(commit=False)
+            #address.name = User.id
             address.save()
             return redirect('payment')
     else:
