@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'FireSale.apps.FiresaleConfig',
     'user.apps.UserConfig',
     'product.apps.ProductConfig',
-    'cart.apps.CartConfig'
+    'cart.apps.CartConfig',
+    'django_countries'
 ]
 
 MIDDLEWARE = [

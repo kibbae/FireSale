@@ -16,7 +16,6 @@ class Address(models.Model):
     street_name = models.TextField(max_length=200)
     city = models.CharField(max_length=50)
     country = models.CharField(max_length=999)
-    #country = models.CountryField()
     zipcode = models.FloatField()
 
 
