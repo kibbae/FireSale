@@ -105,4 +105,4 @@ def make_offer(request, id):
     return render(request, 'product/product_details.html', {
         'form'
         'id': id
-    }
+    })
