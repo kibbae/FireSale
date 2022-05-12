@@ -9,6 +9,6 @@ urlpatterns = [
     path('delete_product/<int:id>', views.delete_product, name='delete-product'),
 
     # path('sort_product', views.sort_product, name="sort-product"),
-    #path('make_offer.html/<int:id>', views.make_offer.html, name="make-offer")
+    path('make_offer.html/<int:id>', views.make_offer.html, name="make-offer")
 
 ]
