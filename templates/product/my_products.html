@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>{{ product.name }}</h1>
+    <h4>{{ product.description }}</h4>
+    <p>{{ product.long_description }}</p>
+    <h3>Starting offer € {{ product.price }}</h3>
+
+    {% for product_image in product.productimage_set.all %}
+
+        <img src="{{ product_image.image }}" class="product-img" />
+
+    {% endfor %}
+    <br>
+    <h3>Current highest offer is : {{ product.price }}</h3> <!-- setja hæsta offer í staðin fyrir price -->
+
+
+{% endblock %}
