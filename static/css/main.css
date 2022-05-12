@@ -10,6 +10,11 @@ body {
     background-color: #FFC989;
 }
 
+main{
+    margin: 10px 50px;
+    text-align: center;
+}
+
 .col-sm-6-col-md-4{
     float: left;
     width: 23%;
@@ -27,12 +32,10 @@ body {
     width: 200px;
 }
 
-#mkoffbutt{
-    width: 50%;
-    margin-left: 25%;
+.single-item{
+    text-align: center;
 }
-
-.MyProfile{
-    padding-left: 10px;
+hr {
+  border-top: 1px dotted black;
 }
 

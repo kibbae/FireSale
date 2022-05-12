@@ -7,6 +7,9 @@
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
           </button>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static "images/Untitled_Artwork.png" %}" id="nav_image-firesale" >
+            </a>
           <a class="navbar-brand" href="{% url 'home' %}">Fire Sale</a>
              <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -30,7 +33,7 @@
                     {% endif %}
                 </span></a></li>
                 <li><a href="#">Purchase history</a></li>
-                  <li><a href="{% url 'offer' %}">Bids/Offers</a></li>
+                  <li><a href="#">Bids/Offers</a></li>
                   <li><a href="{% url 'products' %}">My products</a></li>
               <li><a href="{% url 'create-product' %}" >Add New Product</a></li>
                   <li><a href="{% url 'logout' %}">Logout</a></li>
