@@ -1,3 +1,20 @@
+##########################
+Miðvikudagur 11.maí
+
+fengum leitina til að virka
+add product setur seller id = userinn sem er loggaður inn
+breyttum útliti aðeins .. make offer ekki lengur sér síða heldur bara button þegar þú skoðar vörunna
+
+
+- fyrir morgundaginn .. hlutir til að fá hjálp með ef við náum ekki að laga í dag
+-- make offer
+-- add to cart
+-- complete payment
+-- filter products so only the seller can delete products
+-- fix some template stuffs, like the footer, the buttons, the difference between browser
+-- order by price
+
+
 ###########################
 þriðjudaginn 10.maí
 
