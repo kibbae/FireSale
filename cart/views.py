@@ -1,10 +1,37 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from cart.forms.cart_form import CheckOutFormAddreess, CheckOutFormPayment
+from cart.models import Address, Payment
 
 def index(request):
-    return render(request, 'cart/index.html')
+    if request.method == 'POST':
+        form = CheckOutFormAddreess(data=request.POST)
+        if form.is_valid():
+            Address = form.save(commit=False)
+            Address.save()
+            return redirect('payment')
+    else:
+        form = CheckOutFormAddreess()
+    return render(request, 'cart/index.html', {
+        'form': form
+    })
+
+def payment(request):
+    if request.method == 'POST':
+        form = CheckOutFormPayment(data=request.POST)
+        if form.is_valid():
+            Payment = form.save(commit=False)
+            Payment.save()
+            return redirect('shipping')
+    else:
+        form = CheckOutFormPayment()
+    return render(request, 'cart/payment.html', {
+        'form': form
+    })
 
 def shipping(request):
     return render(request, 'cart/shipping.html')
+
 
 def orderreviw(request):
     return render(request, 'cart/orderrew.html')

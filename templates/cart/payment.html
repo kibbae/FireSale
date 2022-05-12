@@ -4,11 +4,12 @@
     <link rel="stylesheet" href="{% static 'css/cart.css'%}" />
     <ol class="breadcrumb">
       <li><a href="{% url 'home' %}">Home</a></li>
-      <li class="active">Information</li>
+        <li><a href="{% url 'cart' %}">Information</a></li>
+      <li class="active">Payment</li>
     </ol>
     <hr>
-    <h2> Please fill out the following information: </h2>
-            <form action="{% url 'cart' %}" class="form form-horizontal" method="post">
+    <h2> Please fill out payment information: </h2>
+            <form action="{% url 'payment' %}" class="form form-horizontal" method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" class="btn btn-primary" value="Continue"/>
