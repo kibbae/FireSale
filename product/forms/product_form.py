@@ -1,4 +1,4 @@
-import timestamp as timestamp
+#import timestamp as timestamp
 from django.forms import ModelForm, widgets
 from django import forms
 from product.models import Product
