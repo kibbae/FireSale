@@ -1,9 +1,11 @@
 from django.contrib.auth.models import User
 from django.db import models
 from user.models import Profile
+# from django_countries.fields import CountryField
+from django_countries import Countries
 
-# Create your models here.
-
+# countries = Countries
+from django_countries.fields import CountryField
 
 
 class Address(models.Model):
@@ -15,7 +17,8 @@ class Address(models.Model):
     # official name is probably different than username
     street_name = models.TextField(max_length=200)
     city = models.CharField(max_length=50)
-    country = models.CharField(max_length=999)
+    # country = models.CharField(choices=Countries, max_length=100)
+    country = CountryField(blank_label='(select country)')
     zipcode = models.FloatField()
 
 

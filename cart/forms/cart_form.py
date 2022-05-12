@@ -2,6 +2,7 @@ from django.forms import ModelForm, widgets, forms
 #from django_countries.countries import COUNTRIES
 
 from cart.models import Address, Payment
+from django_countries.widgets import CountrySelectWidget
 
 class CheckOutFormAddreess(ModelForm):
     class Meta:
@@ -11,7 +12,7 @@ class CheckOutFormAddreess(ModelForm):
             'full_name': widgets.TextInput(attrs={'class': 'form-control'}),
             'street_name': widgets.TextInput(attrs={'class': 'form-control'}),
             'city': widgets.TextInput(attrs={'class': 'form-control'}),
-            'country': widgets.TextInput(attrs={'class': 'form-control'}),
+            'country': CountrySelectWidget(attrs={'class': 'form-control'}),
             'zipcode': widgets.TextInput(attrs={'class': 'form-control'}),
             #'country': forms.ChoiceField(COUNTRIES),
         }
