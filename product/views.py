@@ -14,7 +14,7 @@ def index(request):
 
 # /myoffers
 def myoffers(request):
-    context = {'offers': Offer.objects.all().order_by('buyer_id')}
+    context = {'products': Product.objects.filter(offer__buyer=request.user)}
     return render(request, 'product/my_offers.html', context)
 
 # products/3
