@@ -107,4 +107,4 @@ def order_by(request, name):
         products = products.order_by(order_product_by)
     context = {'products': products}
     return render(request, 'product/index.html', context)
-    })
+
