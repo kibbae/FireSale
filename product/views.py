@@ -44,7 +44,7 @@ def get_product_by_id(request, id):
         if form.is_valid():
             offer = form.save(commit=False)
             offer.buyer = request.user
-            offer.product = Product.objects.get(pk=id)
+            offer.item = product
             offer.save()
             return redirect('products')
 
