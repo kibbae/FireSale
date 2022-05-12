@@ -12,7 +12,7 @@ breyttum útliti aðeins .. make offer ekki lengur sér síða heldur bara butto
 -- complete payment
 -- filter products so only the seller can delete products
 -- fix some template stuffs, like the footer, the buttons, the difference between browser
--- order by price/name
+-- (komið)order by price/name
 
 
 ###########################
