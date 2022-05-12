@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from product.forms.product_form import ProductCreateForm, ProductUpdateForm
+from product.forms.product_form import ProductCreateForm, ProductUpdateForm, MakeOfferForm
 from product.models import Product, ProductImage
 from django.forms import ModelForm, widgets
 from django import forms
@@ -81,6 +81,30 @@ def update_product(request, id):
 # products/make_offer/4
 @login_required
 def make_offer(request, id):
-        'product': get_object_or_404(Product, pk=id)
+    if request.method == 'POST':
+        form = MakeOfferForm(data=request.POST)
+        if form.is_valid():
+            offer = form.save(commit=False)
+            offer.buyer = request.user
+            offer.product = Product.objects.get(pk=id)
+            offer.save()
+            return redirect('products')
+    else:
+        form = MakeOfferForm()
+
+    return render(request, 'product/make_offer.html', {
+        'form'
+        'id': id
     })
-# breytti html slóðinni í rétt
+
+
+# product/order_product_by/
+def order_by(request, name):
+    products = Product.objects.all()
+    #    context = Product.objects.order_by('name')
+    order_product_by = request.GET.get('order by')
+    if order_product_by:
+        products = products.order_by(order_product_by)
+    context = {'products': products}
+    return render(request, 'product/index.html', context)
+    })
