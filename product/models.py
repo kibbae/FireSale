@@ -41,7 +41,7 @@ class Offer(models.Model):
     Need to be linked to the Product, then by reference to the seller (I guess???)"""
     price = models.FloatField()
     item = models.ForeignKey(Product, on_delete=models.CASCADE)
-    buyer = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    buyer = models.ForeignKey(User, on_delete=models.CASCADE, null=False, related_name='buyer')
     timestamp = models.DateTimeField(auto_now_add=True, blank=True)
     is_accepted = models.BooleanField(default=False)
 

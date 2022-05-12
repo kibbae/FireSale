@@ -10,15 +10,16 @@
 
     {% endfor %}
     <br>
-    <h3>Current highest offer is : {{ product.price }}</h3>
+    <h3>Current highest offer is : {{ product.price }}</h3> <!-- setja hæsta offer í staðin fyrir price -->
     {% if user.is_authenticated %}
-    <input type="text" class="offer" placeholder={{ product.price }}>
         <br><br>
-        <form class="form form-horizontal" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" class="btn btn-primary" value="Make offer"/>
-    </form>
+
+            <form action="{% url 'make-offer' product.id %}" class="form form-horizontal" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" class="btn btn-primary" value="Make offer"/>
+            </form>
+
         <br><br>
     <a href="{% url 'delete-product' product.id  %}" class= "block_btn_btn-primary">Delete product</a>
     <br>
