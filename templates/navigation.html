@@ -32,14 +32,13 @@
                         <img src="{{ user.profile.profile_image }}" class="profile-image navbar-right" id="nav_profile_image"/>
                     {% endif %}
                 </span></a></li>
-                <li><a href="#">Purchase history</a></li>
-                  <li><a href="#">Bids/Offers</a></li>
-                  <li><a href="{% url 'products' %}">My products</a></li>
-              <li><a href="{% url 'create-product' %}" >Add New Product</a></li>
-                  <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li><a href="{% url 'offers' %}">Bids/Offers</a></li>
+                    <li><a href="{% url 'products' %}">My products</a></li>
+                    <li><a href="{% url 'create-product' %}" >Add New Product</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
                   {% else %}
-                      <li><a href="{% url 'login' %}">Login</a></li>
-                      <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
                   {% endif %}
               </ul>
             </li>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<hr id="dotted">
+    <h3>My bids/offers</h3>
+            {% for offer in offers %}
+                {% if offer.buyer_id == user.id %}
+
+                        {% include 'product/single_product.html' with offer=offer %}
+
+                {% endif %}
+            {% endfor %}
+       </div>
+
+{% endblock %}
+
+

@@ -37,8 +37,3 @@ def edit(request):
         'form': ProfileForm(instance=profile)
     })
 
-# Something from the video 8 around 30'
-# to filter product by name (return an array)
-# def index(request):
-#    Product.objects.filter(name__icontains=)
-#    return render(request, 'user/index.html')
