@@ -36,6 +36,7 @@ class ProductImage(models.Model):
     def __str__(self):
         return self.image
 
+
 class Offer(models.Model):
     """To store data when a potential buyer wants to bid on a product.
     Need to be linked to the Product, then by reference to the seller (I guess???)"""
@@ -46,7 +47,7 @@ class Offer(models.Model):
     is_accepted = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.price
+        return self.item
         # we need to return only the price to display + to create a sale if offer is_accepted
 
 
