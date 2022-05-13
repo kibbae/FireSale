@@ -5,11 +5,12 @@
     <hr>
       <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'cart' %}">Information</a></li>
-        <li><a href="{% url 'shipping' %}">Shipping</a></li>
+            <li><a href="{% url 'payment' %}">Information</a></li>
       <li class="active">Order Review</li>
     </ol>
     <h1>Order review</h1>
-    <a type="submit" class="btn btn-default" href="{% url 'shipping' %}" >
+
+    <a type="submit" class="btn btn-default" href="#" >
             Place order
         </a>
 {% endblock %}

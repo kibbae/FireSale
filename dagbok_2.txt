@@ -1,3 +1,27 @@
+########################
+fimmtudagur 12.maí
+
+löguðum my product síðuna.. og aðeins ownerinn á productinu getur delete og update á vöruna og acceptað offer aðrir
+bara boðið í vöruna ..
+fengum í gegn í my offers öll tilboðin sem notandinn hefur gert.. en á eftir að laga smá og sjá hvað notandinn
+bauð í vöruna
+
+-- sýna current highest offer
+-- virkja accept offerið
+-- virkja add to cart
+-- syna vörnar í order rewiev
+-- klára checkout .. laga user draslið sem var að pirra okkur í dag
+-- my offers displaying my offers .. komið en vanntar offer.price inn til að sjá tilboðið sem var gert
+-- add to cart
+-- complete payment
+
+-- (komið)filter products so only the seller can delete products
+-- (komið??)fix some template stuffs, like the footer, the buttons, the difference between browser
+-- (komið)order by price/name
+-- (komið)my products only displaying my products
+-- (komið)make offer
+
+
 ##########################
 Miðvikudagur 11.maí
 

@@ -1,6 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
+
+import product
 from product.forms.product_form import ProductCreateForm, ProductUpdateForm, MakeOfferForm
 from product.models import Product, ProductImage, Offer
 from django.forms import ModelForm, widgets
@@ -12,10 +14,13 @@ def index(request):
     context = {'products': Product.objects.all().order_by('name')}
     return render(request, 'product/my_products.html', context)
 
+
 # /myoffers
 def myoffers(request):
     context = {'products': Product.objects.filter(offer__buyer=request.user)}
+    # highest_offer = Offer.objects.filter().order_by('-offer')[0]
     return render(request, 'product/my_offers.html', context)
+
 
 # products/3
 def get_product_by_id(request, id):

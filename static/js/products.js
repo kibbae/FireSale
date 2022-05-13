@@ -4,7 +4,7 @@ $(document).ready(function() {
         console.log('Hallo')
         var searchText = $('#search-box').val()
         $.ajax(  {
-            url: '/products?search_filter=' + searchText,
+            url: '/?search_filter=' + searchText,
                 type: 'GET',
                 success: function(resp) {
                 console.log(resp.data)

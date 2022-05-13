@@ -13,7 +13,6 @@ def index(request):
             'description': x.description,
             'firstImage': x.productimage_set.first().image
         } for x in Product.objects.filter(name__icontains=search_filter)]
-        # products = list(Product.objects.filter(name__icontains=search_filter).values())
         return JsonResponse({'data': products})
     if 'order_by' in request.GET:
         split = request.GET['order_by'].split("_")

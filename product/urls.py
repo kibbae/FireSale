@@ -1,4 +1,6 @@
 from django.urls import path
+
+import FireSale.views
 from . import views
 
 urlpatterns = [
@@ -8,6 +10,6 @@ urlpatterns = [
     path('update_product/<int:id>', views.update_product, name='update-product'),
     path('delete_product/<int:id>', views.delete_product, name='delete-product'),
     path('make_offer/<int:id>', views.get_product_by_id, name="make-offer"),
-    path('myoffers', views.myoffers, name="offers"),
+    path('myoffers', views.myoffers, name="offers")
    # path('acceptOffer', views.AcceptOffer, name="accept")
 ]
