@@ -41,3 +41,12 @@ class MakeOfferForm(ModelForm):
         widgets = {
             'price': widgets.TextInput(attrs={'class': 'form-control', 'id':"item_id"})
         }
+
+
+class AcceptOffer(ModelForm):
+    class Meta:
+        model: Product
+        exclude = ['id', 'highest_offer', 'seller', 'name', 'condition', 'description', 'price', 'category']
+        widgets = {
+            'is_accepted': widgets.boolean_check("False")
+        }

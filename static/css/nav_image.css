@@ -1,5 +1,6 @@
 #nav_image{
-    width: 1em;  height: 1em;
+    width: 1em;
+    height: 1em;
 
 }
 
@@ -9,10 +10,22 @@
 }
 
 #nav_image-firesale{
-    width: 1em; height: 1em;
+    width: 1em;
+    height: 1em;
 }
 
 #nav_image-firesale-big{
-    width: 5em; height: 5em;
+    width: 5em;
+    height: 5em;
     text-align: center;
+}
+
+#nav_image-profile{
+    width: 2em;
+    height: 2em;
+}
+
+#nav_profile_picture{
+    width: 1em;
+    height: 1em;
 }
