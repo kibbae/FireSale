@@ -2,8 +2,6 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-
-
 # we can not use "User" as it's an inbuilt model in Django
 # so I renamed it Profile because no other idea... /Sophie
 class Profile(models.Model):
