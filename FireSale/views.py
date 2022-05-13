@@ -28,6 +28,3 @@ def index(request):
     context = {'products': Product.objects.all().order_by('name')}
     return render(request, 'product/index.html', context)
 
-# Til að sjá ekki ef ekki loggaður inn
-# @login_required
-# def blabla():

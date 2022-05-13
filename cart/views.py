@@ -19,6 +19,7 @@ def index(request):
         'form': form
     })
 
+
 def payment(request):
     if request.method == 'POST':
         form = CheckOutFormPayment(data=request.POST)
@@ -36,5 +37,3 @@ def payment(request):
 def orderreviw(request):
     context = {'address': Address.objects.all().order_by('full_name')}
     return render(request, 'cart/orderrew.html', context)
-
-
