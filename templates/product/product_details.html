@@ -28,12 +28,13 @@
     {% endif %}
 
     {% if user.id == product.seller_id %}
+        {% if product.on_sale == True %}
 
             <form action="{% url 'accept-offer' product.id %}" class="form form-horizontal" method="post">
                 {% csrf_token %}
                 <input type="submit" class="btn btn-primary" value="Accept Offer"/>
             </form>
-
+        {% endif %}
         <br>
         <a href="{% url 'update-product' product.id  %}" class= "block_btn_btn-primary">Update product</a>
         <br>
