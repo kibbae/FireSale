@@ -6,10 +6,23 @@
     <h3>My products</h3>
             {% for product in products %}
                 {% if user.id == product.seller_id %}
-                    {% include 'product/single_product.html' with product=product %}
+                    {% if product.on_sale == True %}
+                        {% include 'product/single_product.html' with product=product %}
                     <!-- from video 8 around 38'-->
+                    {% endif %}
                 {% endif %}
             {% endfor %}
+    <h3>Sold products</h3>
+    {% for product in products %}
+                {% if user.id == product.seller_id %}
+                    {% if product.on_sale == False %}
+                        {% include 'product/single_product.html' with product=product %}
+                    <!-- from video 8 around 38'-->
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+
        </div>
 
 {% endblock %}

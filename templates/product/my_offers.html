@@ -6,7 +6,7 @@
     <h3>My bids/offers</h3>
             {% for product in products %}
 
-                        {% include 'product/single_offer.html' with product=product %}
+                        {% include 'product/single_offer.html' with product=product and offer=offer %}
 
             {% endfor %}
        </div>

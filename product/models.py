@@ -36,6 +36,7 @@ class ProductImage(models.Model):
     def __str__(self):
         return self.image
 
+
 class Offer(models.Model):
     """To store data when a potential buyer wants to bid on a product.
     Need to be linked to the Product, then by reference to the seller (I guess???)"""

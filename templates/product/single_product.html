@@ -2,13 +2,11 @@
 
   <div class="col-sm-6-col-md-4">
     <div class="thumbnail">
-        {% if product.on_sale == True %}
       <div class="caption">
         <a href="/products/{{ product.id }}">
         <img class="product-img" src="{{ product.productimage_set.first.image }}" id="propic"/>
             <h4 class="single-item">{{ product.name }}</h4></a>
             <p class="single-item">{{ product.description }}</p>
-        {% endif %}
       </div>
     </div>
   </div>

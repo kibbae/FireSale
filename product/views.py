@@ -1,9 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
+from django.db.models import Q, F, Max, Avg, Count
 
-import product
-from product.forms.product_form import ProductCreateForm, ProductUpdateForm, MakeOfferForm
+from product.forms.product_form import ProductCreateForm, ProductUpdateForm, MakeOfferForm, AcceptOfferForm
 from product.models import Product, ProductImage, Offer
 from django.forms import ModelForm, widgets
 from django import forms
@@ -18,7 +18,7 @@ def index(request):
 # /myoffers
 def myoffers(request):
     context = {'products': Product.objects.filter(offer__buyer=request.user)}
-    # highest_offer = Offer.objects.filter().order_by('-offer')[0]
+    #context2 = {'highest': Product.objects.filter(offer__buyer=request.user).annotate(highest=Max('offer__price'))}
     return render(request, 'product/my_offers.html', context)
 
 
@@ -123,3 +123,29 @@ def make_offer(request, id):
         'form': form,
         'id': id
     })
+
+
+"""def acceptoffer(request, id):
+    instance = get_object_or_404(Product, pk=id)
+    if request.method == 'POST':
+        form = AcceptOfferForm(data=request.POST, instance=instance)
+        if form.is_valid():
+            product = form.save()
+            
+            product.save()
+            return redirect('products')
+    form = AcceptOfferForm()
+    return render(request, 'product/product_details.html', {
+        'form': form,
+        'id': id
+    })
+"""
+
+
+
+def acceptoffer(request, id):
+    product = get_object_or_404(Product, pk=id)
+    product.on_sale = False
+    product.save()
+    return redirect('products')  # need to redirect to the name '' registered in the views
+

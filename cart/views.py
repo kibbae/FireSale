@@ -35,4 +35,6 @@ def payment(request):
 
 
 def orderreviw(request):
-    return render(request, 'cart/orderrew.html')
+    context = {'address': Address.objects.all().order_by('full_name')}
+    return render(request, 'cart/orderrew.html', context)
+
