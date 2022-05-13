@@ -13,7 +13,8 @@
                 <!-- get ekki kallað í offer.price á hvert og eitt tilboð -->
             {% else %}
                 <h4 class="single-item"> -- Offer is accepted -- </h4>
-                <button>Add to cart</button>
+                <a href="{% url 'cart' %}" class= "block_btn_btn-primary">Add to cart </a>
+
             {% endif %}
 
       </div>
