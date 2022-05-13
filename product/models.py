@@ -47,7 +47,7 @@ class Offer(models.Model):
     is_accepted = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.item
+        return self.price
         # we need to return only the price to display + to create a sale if offer is_accepted
 
 
