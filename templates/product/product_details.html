@@ -11,7 +11,7 @@
 
     {% endfor %}
     <br>
-    <h3>Current highest offer is : {{ offer }}</h3> <!-- setja hæsta offer í staðin fyrir price -->
+    <h3>Current highest offer is : {{ product.price }}</h3> <!-- setja hæsta offer í staðin fyrir price -->
 
     {% if user.is_authenticated %}
         {% if user.id != product.seller_id %}
@@ -28,8 +28,6 @@
     {% endif %}
 
     {% if user.id == product.seller_id %}
-
-        <p> current highest offer: {{ offer }}</p>
 
             <form action="{% url 'accept-offer' product.id %}" class="form form-horizontal" method="post">
                 {% csrf_token %}

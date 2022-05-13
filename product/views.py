@@ -127,7 +127,11 @@ def make_offer(request, id):
 
 def acceptoffer(request, id):
     product = get_object_or_404(Product, pk=id)
+    winner = product.offer_set.order_by('-price').first()
     product.on_sale = False
     product.save()
+    winner.is_accepted = True
+    winner.save()
     return redirect('products')  # need to redirect to the name '' registered in the views
+
 

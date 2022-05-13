@@ -12,6 +12,8 @@
                     {% endif %}
                 {% endif %}
             {% endfor %}
+
+    <hr>
     <h3>Sold products</h3>
     {% for product in products %}
                 {% if user.id == product.seller_id %}
