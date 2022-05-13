@@ -1,0 +1,38 @@
+IMPLEMENTATIONS PROBLEMS:
+- the search bar is not working anymore
+- the payment is not accepted a second time by the same user
+
+
+####################################################
+REDIRECTION PROBLEMS / UX improvment:
+- the offer page, once user enters an offer, redirects to "my products" page,
+it should redirect to "my bids"
+- the cart is accessible when the user is not logged/registered
+
+
+####################################################
+CSS stuffs:
+- the footer is not fixed at the bottom in profile / login/ logout
+- CVC card should be 3 numbers (max_lenght)
+
+
+####################################################
+SYSTEM CRASH:
+- crash if offer is made by log user without profile editing
+(actually inconsistant when user is logged as well :/
+# IntegrityError at /products/make_offer/14
+# insert or update on table "product_offer" violates foreign key constraint "product_offer_buyer_id_8f9d8eda_fk_user_profile_id"
+# DETAIL:  Key (buyer_id)=(9) is not present in table "user_profile".
+
+- -user not log completed the card and payment, crash when continue
+# NoReverseMatch at /cart/orderreview
+# Reverse for 'shipping' not found. 'shipping' is not a valid view function or pattern name.
+# Request Method: 	GET
+# Request URL: 	http://127.0.0.1:8000/cart/orderreview
+
+
+####################################################
+CATALOGUE STUFFS
+- the toy car displays a second image Nocco
+- it's actually a good idea to display many image by products :)
+
