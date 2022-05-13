@@ -1,12 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from django.db.models import Q, F, Max, Avg, Count
-
 from product.forms.product_form import ProductCreateForm, ProductUpdateForm, MakeOfferForm, AcceptOfferForm
 from product.models import Product, ProductImage, Offer
-from django.forms import ModelForm, widgets
-from django import forms
 
 
 # /products
@@ -76,9 +71,6 @@ def delete_product(request, id):
     return redirect('products')  # need to redirect to the name '' registered in the views
 
 
-# not a requirement, so let's see with that
-
-
 # products/update_product/4
 def update_product(request, id):
     instance = get_object_or_404(Product, pk=id)
@@ -123,6 +115,7 @@ def make_offer(request, id):
         'form': form,
         'id': id
     })
+
 
 @login_required()
 def acceptoffer(request, id):

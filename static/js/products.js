@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#search-btn').on('click', function(e) {
         e.preventDefault()
-        console.log('Hallo')
+
         var searchText = $('#search-box').val()
         $.ajax(  {
             url: '/?search_filter=' + searchText,
