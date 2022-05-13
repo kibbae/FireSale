@@ -125,24 +125,6 @@ def make_offer(request, id):
     })
 
 
-"""def acceptoffer(request, id):
-    instance = get_object_or_404(Product, pk=id)
-    if request.method == 'POST':
-        form = AcceptOfferForm(data=request.POST, instance=instance)
-        if form.is_valid():
-            product = form.save()
-            
-            product.save()
-            return redirect('products')
-    form = AcceptOfferForm()
-    return render(request, 'product/product_details.html', {
-        'form': form,
-        'id': id
-    })
-"""
-
-
-
 def acceptoffer(request, id):
     product = get_object_or_404(Product, pk=id)
     product.on_sale = False
