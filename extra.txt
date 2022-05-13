@@ -1,0 +1,6 @@
+auka sem við bættum við 
+
+- Við gerðum delete product sem aðeins sá sem selur vöruna getur gert 
+- Við gerðum síðu sem sýnir aðeins vörurnar sem userinn sem er loggaður inn á 
+  -- sýnir allar vörur og líka þær sem eru seldar 
+-- Við hönnuðum og teiknuðum sjálf logoið okkar og bættum því við title 
