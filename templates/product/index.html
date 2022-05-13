@@ -2,13 +2,13 @@
 {% block content %}
 <div class="products">
 <h4 id="ordb">Order by:</h4>
-<a href="/?order_by=name_asc">A...Z</a>
+<a href="/?order_by=name_asc">name asc</a>
 <nobr>-</nobr>
-<a href="/?order_by=name_desc">Z...A</a>
+<a href="/?order_by=name_desc">name desc</a>
 <nobr>||</nobr>
-<a href="/?order_by=price_asc">price: low to high</a>
-<nobr>||</nobr>
-<a href="/?order_by=price_desc">price: high to low</a>
+<a href="/?order_by=price_asc">price asc</a>
+<nobr>-</nobr>
+<a href="/?order_by=price_desc">price desc</a>
 <br>
 <hr id="dotted">
             {% for product in products %}
