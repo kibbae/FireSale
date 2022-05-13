@@ -1,10 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from user.models import Profile
-# from django_countries.fields import CountryField
-from django_countries import Countries
-
-# countries = Countries
+from product.models import Product
 from django_countries.fields import CountryField
 
 
@@ -30,3 +27,10 @@ class Payment(models.Model):
     expiry_date = models.DateField(max_length=10)
     cvc_number = models.IntegerField()
     # not sure if it's allowed to store that, but this is dummy so ok I guess
+
+#class Orderreview(models.Model):
+#    """to store the order and display order review"""
+#    item = models.ForeignKey(Product, on_delete=models.CASCADE)
+#    buyer = models.ForeignKey(User, on_delete=models.CASCADE)
+#    payment = models.ForeignKey(Payment, on_delete=models.CASCADE)
+#    information = models.ForeignKey(Address, on_delete=models.CASCADE)

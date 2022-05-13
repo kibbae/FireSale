@@ -1,14 +1,16 @@
 from django.shortcuts import render, redirect
 
+import user
 from cart.forms.cart_form import CheckOutFormAddreess, CheckOutFormPayment
 from cart.models import Address, Payment
+from user.models import Profile
+
 
 def index(request):
     if request.method == 'POST':
         form = CheckOutFormAddreess(data=request.POST)
         if form.is_valid():
             address = form.save(commit=False)
-            #address.name = User.id
             address.save()
             return redirect('payment')
     else:
@@ -30,11 +32,9 @@ def payment(request):
         'form': form
     })
 
-#def shipping(request):
- #   return render(request, 'cart/shipping.html')
-
 
 def orderreviw(request):
     context = {'address': Address.objects.all().order_by('full_name')}
     return render(request, 'cart/orderrew.html', context)
+
 

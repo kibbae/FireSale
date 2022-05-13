@@ -12,7 +12,6 @@ def index(request):
     # context = {'users': User.objects.all().order_by('name')}
     return render(request, 'user/index.html', context={'users': 'users'})
 
-
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(data=request.POST)

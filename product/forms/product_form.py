@@ -39,7 +39,7 @@ class MakeOfferForm(ModelForm):
         model = Offer
         exclude = ['id', 'item', 'buyer', 'timestamp', 'is_accepted']
         widgets = {
-            'price': widgets.TextInput(attrs={'class': 'form-control', 'id':"item_id"})
+            'price': widgets.TextInput(attrs={'class': 'form-control', 'id':"item_id-form"})
         }
 
 
