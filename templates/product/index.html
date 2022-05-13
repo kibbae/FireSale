@@ -12,10 +12,10 @@
 <br>
 <hr id="dotted">
             {% for product in products %}
-
+                {% if product.on_sale == True %}
                 {% include 'product/single_product.html' with product=product %}
                 <!-- from video 8 around 38'-->
-
+                {% endif %}
             {% endfor %}
        </div>
 {% endblock %}

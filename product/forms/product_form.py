@@ -43,10 +43,10 @@ class MakeOfferForm(ModelForm):
         }
 
 
-class AcceptOffer(ModelForm):
+class AcceptOfferForm(ModelForm):
     class Meta:
         model: Product
         exclude = ['id', 'highest_offer', 'seller', 'name', 'condition', 'description', 'price', 'category']
         widgets = {
-            'is_accepted': widgets.boolean_check("False")
+            'available': widgets.boolean_check('v')
         }

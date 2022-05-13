@@ -30,7 +30,12 @@
     {% if user.id == product.seller_id %}
 
         <p> current highest offer: {{ offer }}</p>
-        <a href="#" class= "block_btn_btn-primary">Accept offer</a> <!-- bæta vi ð url -->
+
+            <form action="{% url 'accept-offer' product.id %}" class="form form-horizontal" method="post">
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Accept Offer"/>
+            </form>
+
         <br>
         <a href="{% url 'update-product' product.id  %}" class= "block_btn_btn-primary">Update product</a>
         <br>
