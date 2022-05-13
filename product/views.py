@@ -124,7 +124,7 @@ def make_offer(request, id):
         'id': id
     })
 
-
+@login_required()
 def acceptoffer(request, id):
     product = get_object_or_404(Product, pk=id)
     winner = product.offer_set.order_by('-price').first()
