@@ -8,7 +8,7 @@ git clone https://github.com/kibbae/FireSale.git
 
 Then move to the folder you created, and follow the steps to 
 
-1- create and actual a virtual environement. 
+1- create and activate a virtual environement. 
 
 virtualenv virtualenvName
 source virtualenv_name/bin/activate   
