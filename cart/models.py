@@ -29,12 +29,14 @@ class Payment(models.Model):
     cvc_number = models.IntegerField()
     # not sure if it's allowed to store that, but this is dummy so ok I guess
 
+
 class Orderreview(models.Model):
     """to store the order and display order review"""
     item = models.ForeignKey(Product, on_delete=models.CASCADE)
     buyer = models.ForeignKey(User, on_delete=models.CASCADE)
     payment = models.ForeignKey(Payment, on_delete=models.CASCADE, null=True)
     information = models.ForeignKey(Address, on_delete=models.CASCADE, null=True)
+
 
 class Rating(models.Model):
     """Not sure if we need a class for that but at the moment I don't know how to do other"""
@@ -45,8 +47,6 @@ class Rating(models.Model):
         ('4', '4'),
         ('5', '5'),
             )
-    # todo should be coherent as stars??? or just a number is enough
-    # if we think from the code perspective, not only the user perspective
     rating = models.IntegerField(choices=RATING_OPTIONS)
     seller = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
