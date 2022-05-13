@@ -7,7 +7,6 @@
         <a href="/products/{{ product.id }}">
         <img class="product-img" src="{{ product.productimage_set.first.image }}" id="propic"/>
             <h4 class="single-item">{{ product.name }}</h4></a>
-            <p class="single-item"> {{ product.price }}</p>
             <p class="single-item"> {{ offer.price }}</p>
             {% if product.on_sale == True %}
                 <p class="single-item"> Offer is not accepted</p>
