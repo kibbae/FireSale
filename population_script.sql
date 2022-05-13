@@ -30,6 +30,12 @@ INSERT INTO product_productcategory (name_category) VALUES('home');
 INSERT INTO product_productcategory (name_category) VALUES('animals');
 INSERT INTO product_productcategory (name_category) VALUES('food');
 INSERT INTO product_productcategory (name_category) VALUES('sport');
+INSERT INTO product_productcategory (name_category) VALUES('shoes');
+INSERT INTO product_productcategory (name_category) VALUES('garden');
+INSERT INTO product_productcategory (name_category) VALUES('sports');
+INSERT INTO product_productcategory (name_category) VALUES('electronics');
+INSERT INTO product_productcategory (name_category) VALUES('');
+INSERT INTO product_productcategory (name_category) VALUES('sport');
 
 
 
@@ -40,6 +46,6 @@ INSERT INTO product_productimage (image, product_id) VALUES('https://design-milk
 INSERT INTO product_productimage (image, product_id) VALUES('https://m.media-amazon.com/images/I/71Phdb+rknL._AC_SL1500_.jpg', 5);
 INSERT INTO product_productimage (image, product_id) VALUES('https://i.etsystatic.com/27044626/r/il/3c7745/3353028873/il_340x270.3353028873_pbp2.jpg', 8);
 INSERT INTO product_productimage (image, product_id) VALUES('https://knittingknowledge.com/wp-content/uploads/2021/07/Boring-Cropped-Sweater-01-821x1024.jpg?ezimgfmt=ng:webp/ngcb1', 7);
-INSERT INTO product_productimage (image, product_id) VALUES('https://pbs.twimg.com/media/Eq9cFMqXIAEBMmD.jpg', 5);
+INSERT INTO product_productimage (image, product_id) VALUES('https://pbs.twimg.com/media/Eq9cFMqXIAEBMmD.jpg', 6);
 INSERT INTO product_productimage (image, product_id) VALUES('https://cdn.shopify.com/s/files/1/0150/6262/products/the-sill_monstera_variant_medium_grant_cream_5b593882-bf40-445c-be26-e8cd6b3ddbe1.jpg?v=1650983408', 9);
 INSERT INTO product_productimage (image, product_id) VALUES('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2dcssVOr_3C87MGm92-57wSGodG9lEreXA&usqp=CAU', 10);
